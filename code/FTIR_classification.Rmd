@@ -1,7 +1,5 @@
 ---
 title: "Detection of adulterated samples of Lycium barbarum polysaccharide with Fourier-transform infrared spectroscopy (FTIR)"
-author: "Siyue Yang"
-date: '2022-10-23'
 output: html_document
 ---
 
@@ -58,8 +56,6 @@ dim(df.active_x)
 
 ### PCA on the gradients of the FTIR
 
-[Source](http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/118-principal-component-analysis-in-r-prcomp-vs-princomp/)
-
 We apply the SVD-based PCA to minimize the individual variance. 
 
 
@@ -100,8 +96,6 @@ fviz_pca_ind(res.pca,
 ```
 
 ### 3D visualization of the PCA results
-
-https://plotly.com/r/pca-visualization/ 
 
 ```{r}
 prin_comp <- res.pca
@@ -205,8 +199,6 @@ nrow(testing(splitted))
 ```
 
 ### Multi-class logistic, Naive Bayes and SVM. 
-
-https://mentalbreaks.rbind.io/posts/predicting-household-poverty-in-latin-america-part-ii-evaluating-multi-class-classification-models-with-caret/
 
 ```{r, results = 'hide'}
 train <- training(splitted)
@@ -465,8 +457,6 @@ test <- testing(splitted)
 ```{r}
 table(train$C) %>% kable() %>% kable_styling()
 ```
-
-https://topepo.github.io/caret/model-training-and-tuning.html
 
 ```{r}
 # define models to try
